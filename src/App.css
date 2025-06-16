@@ -1,0 +1,521 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F6F8FF;
+}
+
+#top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+main{
+    width:730px;
+    height:570px;
+}
+
+.p1{
+    font-family: "Space Mono", monospace;
+    color: #4B6A9B;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:16px;
+}
+
+.p1:hover{
+    cursor: pointer;
+}
+
+form {
+    background-color: white;
+    width:730px;
+    height:69px;
+    border-radius: 16px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 40px;
+    position: relative;
+}
+
+input{
+    border:none;
+    outline: none;
+    font-family: "Space Mono", monospace;
+    width:260px;
+    margin-left: 10px;
+    background-color: transparent;
+}
+
+
+input::placeholder{
+    color:#4B6A9B;
+    font-size: 16.5px;
+}
+
+
+.searchDiv{
+    padding-right: 300px;
+    display: flex;
+    flex-direction: row;
+}
+
+.img3{
+    width:22px;
+}
+
+button{
+    background-color: #0079FF;
+    color: #FFFFFF;
+    width:107px;
+    height:48px;
+    border:none;
+    border-radius: 10px;
+    font-family: "Space Mono", monospace;
+    font-weight: 520;
+    font-size: 16px;
+    transition: background-color 0.5s ease-in-out;
+}
+
+button:hover{
+    background-color: #599fef;
+}
+
+#info{
+    width:730px;
+    min-height: 189px;
+    height: auto;
+    background-color: white;
+    border-radius: 15px;
+    padding: 48px;
+    box-shadow: 0px 15px 30px -25px rgba(70, 96, 187, 0.2);
+}
+
+.userAvatar{
+    width:117px;
+    height:117px;
+    border-radius: 50%;
+}
+
+.userName{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    width:100%;
+}
+
+.userMiniInfo1{
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.userMiniInfo2{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.userNameHeading{
+    font-family: "Space Mono", monospace;
+    white-space: nowrap;
+}
+
+.p2{
+    color:#0079FF;
+    font-family: "Space Mono", monospace;
+    font-size: 14px;
+}
+
+.p3{
+    font-family: "Space Mono", monospace;
+    font-size: 14px;
+    color: #4B6A9B;
+    padding-top: 10px;
+    white-space: nowrap;
+}
+
+.bottom{
+    width:480px;
+    height:299px;
+    padding-left: 150px;
+    margin-top: -30px;
+    height: auto;
+}
+
+.BioP{
+    font-family: "Space Mono", monospace;
+    font-size: 14px;
+    color: #4B6A9B;
+    margin-bottom: 24px;
+    width: 450px;
+}
+
+.miniInfoABoutFollowers{
+    display: flex;
+    flex-direction: row;
+    background-color: #F6F8FF;
+    border-radius: 10px;
+    width:480px;
+    height:85px;
+    padding-left: 32px;
+    padding-top: 10px;
+    padding-right: 32px;
+    padding-bottom: 10px;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.p4{
+    font-family: "Space Mono", monospace;
+    font-size: 14px;
+    color: #4B6A9B;
+    margin-bottom: 4px;
+}
+
+h1{
+    font-family: "Space Mono", monospace;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    gap:16px
+}
+
+.firstColumn{
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+}
+
+.firstParagraph, .firstColumnP2{
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+    margin-right: 20px;
+}
+
+.secondColumn{
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+}
+
+
+.firstParagraph span{
+    font-family: "Space Mono", monospace;
+    font-size: 14px;
+    color: #4B6A9B;
+    text-decoration: none;
+}
+
+
+.firstColumnP2 a{
+    font-family: "Space Mono", monospace;
+    font-size: 14px;
+    width:200px;
+    word-break: break-all;
+    color: #4B6A9B;
+    text-decoration: none;
+}
+
+.firstColumnP2 a:hover{
+    text-decoration: underline;
+}
+
+.icon{
+    width:20px;
+    height:20px;
+}
+
+.p{
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+}
+
+.p a{
+    font-family: "Space Mono", monospace;
+    font-size: 14px;
+    width:150px;
+    color: #4B6A9B;
+    text-decoration: none;
+}
+
+.p a:hover{
+    text-decoration: underline;
+}
+
+.errorMessage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:16px;
+}
+
+.errorHeading{
+    font-family: "Space Mono", monospace;
+    font-size: 22px;
+}
+
+.errorP{
+    font-family: "Space Mono", monospace;
+    color: #697C9A;
+    font-size: 15px;
+    text-align: center;
+}
+
+.errorInputMessage{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.errorInputP{
+    font-family: "Space Mono", monospace;
+    white-space: nowrap;
+    color: #F74646;
+    font-weight: 600;
+    position: absolute;
+    right: 150px;
+}
+
+.darkMode{
+    background-color: #141D2F;
+}
+
+.darkMode #info{
+    background-color: #1E2A47;
+}
+
+.darkMode .miniInfoABoutFollowers{
+    background-color: #141D2F;
+}
+
+.darkMode .p4{
+    color: #FFFFFF;
+}
+
+.darkMode form{
+    background-color: #1E2A47;
+}
+
+.darkMode input{
+    background-color: transparent;
+}
+
+.darkMode input::placeholder{
+    color: #BBBFC8;
+}
+
+.darkMode input{
+    color:white
+}
+
+.darkMode h1{
+    color: #FFFFFF;
+}
+
+.darkMode .userNameHeading{
+    color: #FFFFFF;
+}
+
+.darkMode .p2{
+    color: #60ABFF;
+}
+
+
+.darkMode .p3{
+    color: #FFFFFF
+}
+
+.darkMode .BioP{
+    color: #BBBFC8
+}
+
+.darkMode .firstParagraph span{
+    color: #BBBFC8;
+}
+
+
+.darkMode .firstColumnP2 a{
+    color: #BBBFC8;
+}
+
+.darkMode .p a{
+    color: #BBBFC8
+}
+
+.darkMode .icon{
+    filter: invert(1) brightness(2);
+}
+
+.darkMode .img1{
+    filter: invert(1) brightness(2);
+}
+
+.darkMode .p1{
+    color: #90A4D4;
+}
+
+.darkMode .errorHeading{
+    color: white;
+}
+
+.darkMode .errorP{
+    color: #90A4D4;
+}
+
+@media screen and (max-width: 768px){
+    form{
+        width:704px;
+        height:69px;
+        margin-bottom: 40px;
+    }
+
+    input{
+        width: 230px;
+    }
+
+    #info{
+        width:704px;
+    }
+    
+
+    #top{
+        display: flex;
+        justify-content:space-between;
+    }
+
+    main{
+        width:704px;
+        height:570px;
+    }
+}
+
+@media screen and (max-width: 734px){
+    form{
+        width: 343px;
+        height:69px;
+        margin-bottom: 40px;
+    }
+
+    input{
+        width: 185px;
+    }
+
+    input::placeholder{
+        font-size: 13px;
+    }
+
+    #info{
+        width: 343px;
+        padding: 24px;
+        min-height: 189px;
+        height: auto;
+    }
+    
+    .userAvatar{
+        width:70px;
+        height:70px;
+    }
+
+    .userMiniInfo2{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .userNameHeading{
+        white-space: wrap;
+    }
+
+    .bottom{
+        width:295px;
+        height:440px;
+        padding-left: 0px;
+        margin-top: 24px;
+        height: auto;
+    }
+
+    .miniInfoABoutFollowers{
+        display: flex;
+        flex-direction: column;
+        background-color: #F6F8FF;
+        border-radius: 10px;
+        width:295px;
+        height:229px;
+        padding-left: 32px;
+        padding-top: 10px;
+        padding-right: 32px;
+        padding-bottom: 10px;
+        margin-bottom: 24px;
+    }
+
+    .row{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .searchDiv{
+        padding-right: 0px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #top{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .BioP{
+        width: 295px;
+    }
+
+    .userName{
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        width:100%;
+    }
+
+    .p3{
+        padding-top: 4px;
+        white-space: nowrap;
+    }
+
+    .errorInputP{
+        display: none;
+    }
+
+    .errorP{
+        font-size: 14px;
+    }
+
+    main{
+        width:343px;
+        height:771px;
+    }
+}
