@@ -1,6 +1,15 @@
 import { useEffect, useState } from "react";  // ვა - import - ებთ useEffect და useState კაუჭებს react - ის ბიბლიოთეკიდან
 import "./App.css" // ვა - import - ებთ App.css - ის ფაილს ჩვენი ვებ - გვერდის გასასტილად
 
+import iconMoon from './assets/icon-moon.svg';
+import iconSun from './assets/Theme Icon.svg';
+import iconSearch from './assets/icon-search.svg';
+import iconLocation from './assets/Shape.svg';
+import iconWebsite from './assets/Blog Icon.svg';
+import iconTwitter from './assets/Path.svg';
+import iconCompany from './assets/Company Icon.svg';
+import iconLogo from './assets/Logo (1).svg';
+
 function App() {
   const [user, setUser] = useState(); // useState - ი აბრუნებს ორ მნიშვნელობას user - ს საწყისი მნიშვნელობა რომელიც უნდა შეიცვალოს და setUser ფუნქციას რომელმაც უნდა შეცვალოს 
   // საწყისი მნიშვენელობა
@@ -46,10 +55,10 @@ function App() {
 
     if(text.innerHTML.includes('DARK')) { // ვამოწმებთ თუ text ცვლადში ინფორმაციის innerHTML იგივე შიგთავსი მოიცავს ისეთ მნიშვნელობას როგორიცაა 
       // DARK მაშინ ჩვენ ვცვლით text ცვლადის მნიშვნელობას
-      text.innerHTML = 'LIGHT <img src="./src/assets/Theme Icon.svg" class="img2"/>'; // text.innerHTML განვაახლეთ და შევცვალეთ LIGHT <img src="./src/assets/Theme Icon.svg" class="img2" /> - ით
+      text.innerHTML = `LIGHT <img src="${iconSun}" />`; // text.innerHTML განვაახლეთ და შევცვალეთ LIGHT <img src="./src/assets/Theme Icon.svg" class="img2" /> - ით
       document.body.classList.add('darkMode'); // ჩვენს document ის ფაილში არსებულ body თეგის classList ში ვამატებთ ახალ className - ს darkMode - ს
     }else{ // სხვა შემთხვევაში თუ text ცვლადში ინფორმაციის innerHTML იგივე შიგთავსი არ მოიცავს მნიშვნელობას სახელად DARK
-      text.innerHTML = 'DARK <img src="./src/assets/icon-moon.svg" className="img2"/>'; // მაშინ text - ცვლადის შეგთავსი შეიცვლება და გახდება DARK <img src="./src/assets/icon-moon.svg" className="img2"/>
+      text.innerHTML = `DARK <img src="${iconMoon}"/>`; // მაშინ text - ცვლადის შეგთავსი შეიცვლება და გახდება DARK <img src="./src/assets/icon-moon.svg" className="img2"/>
       // LIGHT <img src="./src/assets/Theme Icon.svg" class="img2" /> მაგივრად
       document.body.classList.remove('darkMode'); // document - ის ფაილში არსებულ body თეგის classList - დან ვშლით ერთ className - ს სახელად  darkMode 
     }
@@ -84,14 +93,14 @@ function App() {
  return (
   <main>
     <section id="top">
-      <img src="./src/assets/Logo (1).svg" className="img1"/>
-      <p className="p1" onClick={handleDark}>DARK <img src="./src/assets/icon-moon.svg" className="img2"/></p>
+      <img src={iconLogo} className="img1"/>
+      <p className="p1" onClick={handleDark}>DARK <img src={iconMoon} className="img2"/></p>
     </section>
 
     <section id='search'>
       <form onSubmit={handleSubmit}>
         <div className="searchDiv">
-          <img src="./src/assets/icon-search.svg" className="img3"/>
+          <img src={iconSearch} className="img3"/>
           <input type='text' placeholder='Search GitHub username…' name='username' required />
         </div>
         <div>
@@ -146,12 +155,12 @@ function App() {
               </div>
               <div className="row">
                 <div className="firstColumn">
-                  <p className="firstParagraph"><img src="./src/assets/Shape.svg" className="icon"/><span>{user.location ? user.location : "Not Available"}</span></p>
-                  <p className="firstColumnP2"><img src="./src/assets/Blog icon.svg" className="icon" />{user.blog ? (<a target="_blank" href={user.blog?.startsWith("http") ? user.blog : `https://${user.blog}`}>{user.blog}</a>) : (<a>Not Available</a>)}</p>
+                  <p className="firstParagraph"><img src={iconLocation} className="icon"/><span>{user.location ? user.location : "Not Available"}</span></p>
+                  <p className="firstColumnP2"><img src={iconWebsite} className="icon" />{user.blog ? (<a target="_blank" href={user.blog?.startsWith("http") ? user.blog : `https://${user.blog}`}>{user.blog}</a>) : (<a>Not Available</a>)}</p>
                 </div>
                 <div className="secondColumn">
-                  <p className="p"><img src="./src/assets/Path.svg" className="icon"/>{user.twitter_username ? (<a target="_blank" href={`https://twitter.com/${user.twitter_username}`}>{user.twitter_username}</a>) : (<a>Not Available</a>)}</p>
-                  <p className="p"><img src="./src/assets/Company Icon.svg" className="icon"/>{user.company ? (<a target="_blank" href={user.company?.startsWith('@') ? `https://github.com/${user.company.replace('@','')}` : `https//www.google.com/search?q=${user.company}`}>{user.company}</a> ) : (<a>Not Available</a>)}</p>
+                  <p className="p"><img src={iconTwitter} className="icon"/>{user.twitter_username ? (<a target="_blank" href={`https://twitter.com/${user.twitter_username}`}>{user.twitter_username}</a>) : (<a>Not Available</a>)}</p>
+                  <p className="p"><img src={iconCompany} className="icon"/>{user.company ? (<a target="_blank" href={user.company?.startsWith('@') ? `https://github.com/${user.company.replace('@','')}` : `https//www.google.com/search?q=${user.company}`}>{user.company}</a> ) : (<a>Not Available</a>)}</p>
                 </div>
               </div>
             </div>
